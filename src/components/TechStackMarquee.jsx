@@ -16,7 +16,7 @@ const stack = [
 
 export default function TechStackMarquee() {
   return (
-    <section className='py-12 bg-background border-b border-[#374151] overflow-hidden relative flex selection:bg-primary'>
+    <section className='snap-start py-12 bg-background border-b border-[#374151] overflow-hidden relative flex selection:bg-primary'>
       {/* Gradient masks */}
       <div className='absolute inset-y-0 left-0 w-32 bg-linear-to-r from-background to-transparent z-10 pointer-events-none'></div>
       <div className='absolute inset-y-0 right-0 w-32 bg-linear-to-l from-background to-transparent z-10 pointer-events-none'></div>

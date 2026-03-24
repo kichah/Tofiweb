@@ -11,8 +11,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${oswald.variable} font-sans antialiased bg-background text-offwhite`}>
+    <html lang="en" className="snap-y snap-mandatory scroll-smooth md:snap-proximity" style={{ position: 'relative' }}>
+      <body className={`${inter.variable} ${oswald.variable} font-sans antialiased bg-background text-offwhite`} >
         {children}
       </body>
     </html>

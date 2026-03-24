@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading';
@@ -12,10 +12,11 @@ const projects = [
     tags: [
       { text: 'Landing Page', color: 'green' },
       { text: 'Responsive', color: 'indigo' },
-      { text: 'Light Mode', color: 'orange' }
+      { text: 'Light Mode', color: 'orange' },
     ],
-    detail: 'A personal portfolio site built with Next.js, featuring a fully responsive layout and dark/light mode toggle. Optimized for performance, accessibility, and clean navi...',
-    img: '/img/hero.webp'
+    detail:
+      'A personal portfolio site built with Next.js, featuring a fully responsive layout and dark/light mode toggle. Optimized for performance, accessibility, and clean navi...',
+    img: '/img/hero.webp',
   },
   {
     id: 2,
@@ -24,10 +25,11 @@ const projects = [
     tags: [
       { text: '8 Screen', color: 'green' },
       { text: 'Mobile', color: 'indigo' },
-      { text: 'Dark Mode', color: 'orange' }
+      { text: 'Dark Mode', color: 'orange' },
     ],
-    detail: 'Functional development. With experience across design systems, user experience, and front-end technologies, I focus on crafting products that are not just beautiful...',
-    img: '/img/hero.webp'
+    detail:
+      'Functional development. With experience across design systems, user experience, and front-end technologies, I focus on crafting products that are not just beautiful...',
+    img: '/img/hero.webp',
   },
   {
     id: 3,
@@ -36,10 +38,11 @@ const projects = [
     tags: [
       { text: '10 Screens', color: 'green' },
       { text: 'Mobile', color: 'blue' },
-      { text: 'Shopping UI', color: 'orange' }
+      { text: 'Shopping UI', color: 'orange' },
     ],
-    detail: 'A modern e-commerce mobile interface focused on minimal design, easy checkout flow, and clean product layouts. Designed entirely in Figma with a focus on mob...',
-    img: '/img/hero.webp'
+    detail:
+      'A modern e-commerce mobile interface focused on minimal design, easy checkout flow, and clean product layouts. Designed entirely in Figma with a focus on mob...',
+    img: '/img/hero.webp',
   },
   {
     id: 4,
@@ -47,10 +50,11 @@ const projects = [
     category: 'Web App',
     tags: [
       { text: 'Dashboard', color: 'blue' },
-      { text: 'Analytics', color: 'purple' }
+      { text: 'Analytics', color: 'purple' },
     ],
-    detail: 'A sleek financial dashboard presenting complex data in an easy-to-read, actionable format utilizing charts, custom widgets, and dark mode optimizations.',
-    img: '/placeholder4.jpg'
+    detail:
+      'A sleek financial dashboard presenting complex data in an easy-to-read, actionable format utilizing charts, custom widgets, and dark mode optimizations.',
+    img: '/img/hero.webp',
   },
 ];
 
@@ -74,19 +78,22 @@ export default function ProjectsCarousel() {
   // On Mobile: snap to 16px from left edge. On Desktop: centered.
   const startOffset = isMobile ? '16px' : `calc(50vw - ${ITEM_WIDTH / 2}px)`;
 
-  const containerRef = useRef(null);
-
   return (
-    <section id="projects" className="py-20 md:py-24 bg-background overflow-hidden relative border-b border-[#374151]">
-      <div className="section-container mb-12 md:mb-16">
+    <section
+      id='projects'
+      className='snap-start py-20 md:py-24 bg-background overflow-hidden relative border-b border-[#374151]'
+    >
+      <div className='section-container mb-12 md:mb-16'>
         <SectionHeading>Featured Projects</SectionHeading>
       </div>
 
-      <div ref={containerRef} className="relative w-full overflow-hidden min-h-[600px] md:h-[750px] py-10 md:py-0 flex items-center">
+      <div
+        className='relative w-full overflow-hidden min-h-150 md:h-187.5 py-10 md:py-0 flex items-center'
+      >
         {/* Carousel Track */}
         <motion.div
-          drag="x"
-          dragConstraints={containerRef}
+          drag={'x'}
+          dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.15}
           onDragEnd={(e, { offset, velocity }) => {
             const swipe = offset.x;
@@ -99,15 +106,17 @@ export default function ProjectsCarousel() {
               if (active > 0) setActive(active - 1);
             }
           }}
-          animate={{ x: `calc(${startOffset} - ${(ITEM_WIDTH + GAP) * active}px)` }}
-          transition={{ type: "spring", stiffness: 200, damping: 30 }}
-          className="flex items-stretch md:items-center relative w-max cursor-grab active:cursor-grabbing touch-pan-y"
-          style={{ gap: `${GAP}px` }}
+          animate={{
+            x: `calc(${startOffset} - ${(ITEM_WIDTH + GAP) * active}px)`,
+          }}
+          transition={{ type: 'spring', stiffness: 200, damping: 30 }}
+          className='flex items-stretch md:items-center relative w-max cursor-grab active:cursor-grabbing touch-pan-y'
+          style={{ gap: `${GAP}px`, position: 'relative' }}
         >
-          {projects.map((porject, i) => (
+          {projects.map((project, i) => (
             <CarouselCard
-              key={porject.id}
-              project={porject}
+              key={project.id}
+              project={project}
               isActive={i === active}
               onClick={() => setActive(i)}
               itemWidth={ITEM_WIDTH}

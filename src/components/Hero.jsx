@@ -2,7 +2,7 @@ import { MoveRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-dvh pt-24 pb-16 flex items-center justify-start overflow-hidden w-full border-b border-[#374151]">
+    <section className="snap-start relative min-h-dvh pt-24 pb-16 flex items-center justify-start overflow-hidden w-full border-b border-[#374151]">
       {/* Background image rectangle */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] xl:w-[35%] lg:w-[45%] md:w-[60%] h-[105%] bg-darkGray rounded-b-full overflow-hidden z-0 shadow-2xl">
         {/* Placeholder for the image */}
