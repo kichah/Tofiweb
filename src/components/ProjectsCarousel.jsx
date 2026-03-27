@@ -3,64 +3,15 @@ import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading';
 import CarouselCard from './CarouselCard';
-
-const projects = [
-  {
-    id: 1,
-    title: 'Portfolio Website V3',
-    category: 'UI/UX Design',
-    tags: [
-      { text: 'Landing Page', color: 'green' },
-      { text: 'Responsive', color: 'indigo' },
-      { text: 'Light Mode', color: 'orange' },
-    ],
-    detail:
-      'A personal portfolio site built with Next.js, featuring a fully responsive layout and dark/light mode toggle. Optimized for performance, accessibility, and clean navi...',
-    img: '/img/hero.webp',
-  },
-  {
-    id: 2,
-    title: 'Digital Agency Website',
-    category: 'UI/UX Design',
-    tags: [
-      { text: '8 Screen', color: 'green' },
-      { text: 'Mobile', color: 'indigo' },
-      { text: 'Dark Mode', color: 'orange' },
-    ],
-    detail:
-      'Functional development. With experience across design systems, user experience, and front-end technologies, I focus on crafting products that are not just beautiful...',
-    img: '/img/hero.webp',
-  },
-  {
-    id: 3,
-    title: 'VR Games Website',
-    category: 'UI/UX Design',
-    tags: [
-      { text: '10 Screens', color: 'green' },
-      { text: 'Mobile', color: 'blue' },
-      { text: 'Shopping UI', color: 'orange' },
-    ],
-    detail:
-      'A modern e-commerce mobile interface focused on minimal design, easy checkout flow, and clean product layouts. Designed entirely in Figma with a focus on mob...',
-    img: '/img/hero.webp',
-  },
-  {
-    id: 4,
-    title: 'Fintech Dashboard',
-    category: 'Web App',
-    tags: [
-      { text: 'Dashboard', color: 'blue' },
-      { text: 'Analytics', color: 'purple' },
-    ],
-    detail:
-      'A sleek financial dashboard presenting complex data in an easy-to-read, actionable format utilizing charts, custom widgets, and dark mode optimizations.',
-    img: '/img/hero.webp',
-  },
-];
+import { getAllProjects } from '@/app/_lib/data';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function ProjectsCarousel() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
   const [windowWidth, setWindowWidth] = useState(1200);
+
+  const projects = getAllProjects();
 
   useEffect(() => {
     // Set initial width
@@ -70,9 +21,9 @@ export default function ProjectsCarousel() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const isMobile = windowWidth < 768;
+  const isMobile = windowWidth < 500;
   // Make the card slightly smaller than the screen on mobile, allowing the next card to peek in.
-  const ITEM_WIDTH = isMobile ? windowWidth * 0.82 : 400;
+  const ITEM_WIDTH = isMobile ? windowWidth * 0.82 : 450;
   const GAP = isMobile ? 16 : 32;
 
   // On Mobile: snap to 16px from left edge. On Desktop: centered.
@@ -81,10 +32,13 @@ export default function ProjectsCarousel() {
   return (
     <section
       id='projects'
-      className='snap-start py-20 md:py-24 bg-background overflow-hidden relative border-b border-[#374151]'
+      className=' py-20 md:py-24 bg-background overflow-hidden relative border-b border-[#374151]'
     >
-      <div className='section-container mb-12 md:mb-16'>
+      <div className='section-container mb-12 md:mb-16 flex justify-between items-end'>
         <SectionHeading>Featured Projects</SectionHeading>
+        <Link href="/projects" className="text-primary hover:text-white font-inter text-[13px] md:text-sm font-bold uppercase tracking-widest transition-colors mb-4 flex items-center gap-2">
+          View All <ArrowUpRight size={16} />
+        </Link>
       </div>
 
       <div

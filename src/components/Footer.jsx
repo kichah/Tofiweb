@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className='snap-start bg-background pt-20 pb-12 border-t border-white/5 relative z-10 -mt-10'>
+    <footer className=' bg-background pt-20 pb-12 border-t border-white/5 relative z-10 -mt-10'>
       {/* The mt-[-40px] and z-10 is to slightly tuck under or right below the contact section curve if needed, though they don't overlap directly */}
       <div className='section-container flex flex-col md:flex-row justify-between gap-16 mt-10'>
         {/* Left Area (1fr) */}
@@ -47,27 +47,33 @@ export default function Footer() {
 
         {/* Right Area (2fr/flex-grow) */}
         <div className='flex-2 flex flex-col md:items-end md:text-right'>
-          <nav className='flex flex-wrap md:justify-end gap-x-12 gap-y-4 font-inter text-sm font-bold text-offwhite mb-16'>
+          <nav className='grid grid-cols-3 gap-x-2 gap-y-6 sm:gap-x-6 md:flex md:flex-wrap md:justify-end md:gap-x-12 md:gap-y-4 font-inter text-[13px]  lg:text-base xl:text-xl font-bold text-offwhite mb-16'>
             <Link
-              href='#projects'
+              href='/'
+              className='hover:text-primary transition-colors uppercase tracking-widest'
+            >
+              Home
+            </Link>
+            <Link
+              href='/projects'
               className='hover:text-primary transition-colors uppercase tracking-widest'
             >
               Projects
             </Link>
             <Link
-              href='#dev-blog'
+              href='/blog'
               className='hover:text-primary transition-colors uppercase tracking-widest'
             >
               Dev Blog
             </Link>
             <Link
-              href='#about'
+              href='/about'
               className='hover:text-primary transition-colors uppercase tracking-widest'
             >
               About me
             </Link>
             <Link
-              href='#contact'
+              href='/contact'
               className='hover:text-primary transition-colors uppercase tracking-widest'
             >
               Contact me

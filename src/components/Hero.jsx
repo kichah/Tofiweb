@@ -2,9 +2,9 @@ import { MoveRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="snap-start relative min-h-dvh pt-24 pb-16 flex items-center justify-start overflow-hidden w-full border-b border-[#374151]">
+    <section className=" relative min-h-dvh pt-24 pb-16 flex justify-start overflow-hidden w-full border-b border-[#374151]">
       {/* Background image rectangle */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] xl:w-[35%] lg:w-[45%] md:w-[60%] h-[105%] bg-darkGray rounded-b-full overflow-hidden z-0 shadow-2xl">
+      <div className="absolute top-0 right-0 w-[80%] xl:w-[35%] lg:w-[45%] md:w-[60%] h-[105%] bg-darkGray rounded-b-full overflow-hidden z-0 shadow-2xl">
         {/* Placeholder for the image */}
         <div className="w-full h-full bg-cover bg-position-[60%_center] " style={{ backgroundImage: "url('/img/placeholder-hero.png')" }}></div>
         <div className="absolute inset-0 bg-black/20"></div>
@@ -12,7 +12,7 @@ export default function Hero() {
 
       {/* Content Overlay */}
       <div className="section-container relative z-10 pointer-events-none">
-        <div className="flex flex-col items-start gap-6 mt-16 pointer-events-auto relative z-20">
+        <div className="flex flex-col items-start gap-6 mt-24 pointer-events-auto relative z-20">
           <h1 className="font-oswald text-5xl sm:text-7xl md:text-[6rem] leading-none tracking-tight uppercase text-offwhite drop-shadow-2xl max-w-[70%]">
             DIGITAL EXPERIENCES<br />
             CRAFTED FOR <br />

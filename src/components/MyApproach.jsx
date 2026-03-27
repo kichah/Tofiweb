@@ -12,30 +12,30 @@ import { Search, PenTool, Terminal, Rocket } from 'lucide-react';
 
 const steps = [
   {
-    num: '01 / DISCOVERY',
+    num: '01 / Discovery & Strategy',
     title: 'UNDERSTANDING THE GOAL',
-    desc: 'We dive deep into your brand, target audience, and business objectives to ensure the website serves your exact needs.',
+    desc: 'Before writing a single line of code, we dig into your brand, your local customers, and your current bottlenecks. We map out the exact strategy needed to increase your conversions and build buyer trust.',
     color: '#F60A2E', // Red
     icon: Search,
   },
   {
-    num: '02 / DESIGN',
-    title: 'CRAFTING THE EXPERIENCE',
-    desc: 'Combining premium aesthetics with intuitive UX, I create layouts that guide users smoothly toward conversion.',
+    num: '02 / Brand & UI Design',
+    title: 'DESIGNING FOR TRUST',
+    desc: 'Your products are premium, and your digital storefront must reflect that. I design a clean, modern, and beautiful user interface that makes your brand look expensive and makes navigating your store effortless.',
     color: '#f97316', // Orange
     icon: PenTool,
   },
   {
-    num: '03 / DEVELOPMENT',
-    title: 'BUILDING HIGH-PERFORMANCE',
-    desc: 'Writing clean, modern code so your site loads blazingly fast and runs perfectly across every device.',
+    num: '03 / Development',
+    title: 'HIGH-PERFORMANCE ENGINEERING',
+    desc: 'This is where the magic happens. I build robust, custom web applications with zero bloated templates. The result is a highly secure, ultra-fast digital storefront that feels premium and works flawlessly across multiple languages.',
     color: '#eab308', // Yellow
     icon: Terminal,
   },
   {
-    num: '04 / DEPLOYMENT',
-    title: 'OPTIMIZATION & LAUNCH',
-    desc: 'CI/CD pipelines, SEO audits, and edge caching strategies ensuring a flawless, high-performance go-live.',
+    num: '04 / Testing & Launch',
+    title: 'LAUNCH & CONVERSION',
+    desc: 'We rigorously test the site on all devices to ensure zero dropped carts. Once we launch, you get a highly scalable, automated sales machine so you can step away from the tech and focus entirely on growing your business.',
     color: '#fef08a', // Bright yellow
     icon: Rocket,
   },
@@ -61,11 +61,11 @@ export default function MyApproach() {
     let step = 0;
     // 'latest' represents your scroll progress from 0.0 to 1.0.
     // Adjust these numbers to tune the exact transition points!
-    if (latest < 0.20) {
+    if (latest < 0.25) {
       step = 0; // Step 1: 0% to 20%
-    } else if (latest < 0.45) {
+    } else if (latest < 0.50) {
       step = 1; // Step 2: 20% to 45%
-    } else if (latest < 0.75) {
+    } else if (latest < 0.8) {
       step = 2; // Step 3: 45% to 70%
     } else {
       step = 3; // Step 4: 70% to 100% (This gives the final step a huge amount of scroll time)
@@ -81,7 +81,7 @@ export default function MyApproach() {
     <section
       ref={containerRef}
       id='approach'
-      className='snap-start h-[500dvh] md:h-[350dvh] bg-[#0a0a0a] text-offwhite border-b border-[#374151] relative'
+      className='h-[600dvh] md:h-[300dvh] bg-[#0a0a0a] text-offwhite border-b border-[#374151] relative'
 
     >
       <div className='sticky top-0 h-dvh w-full flex flex-col z-20 overflow-hidden pointer-events-none'>
