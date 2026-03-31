@@ -5,8 +5,11 @@ import TechStackMarquee from "@/components/TechStackMarquee";
 import DevLogs from "@/components/DevLogs";
 import Contact from "@/components/Contact";
 import MyApproach from "@/components/MyApproach";
+import { getProjects } from "./_lib/apiProject";
 
-export default function Home() {
+export default async function Home() {
+  const { projects, error } = await getProjects();
+  console.log(projects)
   return (
     <main className="min-h-screen relative overflow-x-clip bg-background" >
       <Hero />

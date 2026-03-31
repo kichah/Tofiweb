@@ -67,7 +67,7 @@ export default function Contact() {
 
           {/* Right Area - Form */}
           <div className="flex items-center w-full">
-            <form className="w-full flex flex-col gap-8 bg-[#222222] p-8 xl:p-14 rounded-4xl border border-white/5 shadow-2xl text-white min-h-[50dvh]">
+            <form className="w-full flex flex-col gap-8 bg-[#222222] p-8 xl:p-14 rounded-4xl border border-white/5 shadow-2xl text-white min-h-[50vh]">
               <div>
                 <label className="block font-inter text-sm font-bold text-gray-400 uppercase tracking-widest mb-2" htmlFor="name">Name</label>
                 <input type="text" id="name" className="w-full bg-transparent border-b-2 border-[#444] focus:border-primary outline-none py-2 font-inter text-lg transition-all focus:shadow-[0_4px_15px_-3px_rgba(246,210,10,0.15)] placeholder:text-gray-600 focus:placeholder:text-gray-400" placeholder="John Doe" />

@@ -81,10 +81,10 @@ export default function MyApproach() {
     <section
       ref={containerRef}
       id='approach'
-      className='h-[600dvh] md:h-[300dvh] bg-[#0a0a0a] text-offwhite border-b border-[#374151] relative'
+      className='h-[600vh] md:h-[300vh] bg-[#0a0a0a] text-offwhite border-b border-[#374151] relative'
 
     >
-      <div className='sticky top-0 h-dvh w-full flex flex-col z-20 overflow-hidden pointer-events-none'>
+      <div className='sticky top-0 h-lvh w-full flex flex-col z-20 overflow-hidden pointer-events-none'>
         {/* Dynamic Background Glow */}
         <div
           className='absolute inset-0 z-0 opacity-20 transition-colors duration-1000'
@@ -99,7 +99,7 @@ export default function MyApproach() {
         </div>
 
         {/* Timeline & Text Layout */}
-        <div className='flex-1 w-full max-w-6xl mx-auto flex items-center relative z-20 px-8 md:px-16 pb-12 pointer-events-auto mt-[-5dvh] lg:mt-0'>
+        <div className='flex-1 w-full max-w-6xl mx-auto flex items-center relative z-20 px-8 md:px-16 pb-12 pointer-events-auto mt-[-5vh] lg:mt-0'>
           {/* LEFT: Extended Segmented Colored Timeline */}
           <div className='w-20 md:w-30 h-112.5 md:h-150 relative shrink-0 flex flex-col items-center justify-between'>
             {/* Top Entry Stub */}

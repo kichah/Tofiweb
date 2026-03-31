@@ -123,8 +123,7 @@ export default function ContactPage() {
                   src="https://calendly.com/abdellatifkichah/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=f6d20a"
                   width="100%"
                   height="100%"
-                  frameBorder="0"
-                  className="w-full h-full absolute inset-0"
+                  className="w-full h-full absolute inset-0 border-none"
                 ></iframe>
               </div>
             </div>

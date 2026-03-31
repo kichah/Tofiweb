@@ -2,7 +2,7 @@ import { MoveRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className=" relative min-h-dvh pt-24 pb-16 flex justify-start overflow-hidden w-full border-b border-[#374151]">
+    <section className=" relative min-h-lvh pt-24 pb-16 flex justify-start overflow-hidden w-full border-b border-[#374151]">
       {/* Background image rectangle */}
       <div className="absolute top-0 right-0 w-[80%] xl:w-[35%] lg:w-[45%] md:w-[60%] h-[105%] bg-darkGray rounded-b-full overflow-hidden z-0 shadow-2xl">
         {/* Placeholder for the image */}
@@ -19,12 +19,10 @@ export default function Hero() {
             <span className="text-primary"> AMBITIOUS BRANDS.</span>
           </h1>
           <p className="font-inter text-sm md:text-base text-gray-200 max-w-sm leading-relaxed mb-4 mt-2 pr-4 drop-shadow-xl font-medium">
-            Your products are premium. Your website should be, too. I design and
-            develop high-performance e-commerce platforms so you can focus
-            100% on growing your business.s
+            Your products are premium. Your website should be, too. I design and engineer high-performance e-commerce platforms so you can stop worrying about the tech and focus entirely on scaling your business.
           </p>
           <button className="group flex items-center gap-4 bg-primary text-black font-inter font-bold text-sm tracking-widest uppercase pl-8 pr-2 py-2 rounded-full hover:bg-[#e0be00] transition-colors duration-300 drop-shadow-xl pointer-events-auto">
-            VIEW MY WORK
+            BOOK A STRATEGY CALL
             <span className="bg-black text-offwhite rounded-full p-2 flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-transform duration-300">
               <MoveRight size={18} />
             </span>

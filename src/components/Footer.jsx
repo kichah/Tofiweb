@@ -47,7 +47,7 @@ export default function Footer() {
 
         {/* Right Area (2fr/flex-grow) */}
         <div className='flex-2 flex flex-col md:items-end md:text-right'>
-          <nav className='grid grid-cols-3 gap-x-2 gap-y-6 sm:gap-x-6 md:flex md:flex-wrap md:justify-end md:gap-x-12 md:gap-y-4 font-inter text-[13px]  lg:text-base xl:text-xl font-bold text-offwhite mb-16'>
+          <nav className='grid grid-cols-3 gap-x-2 gap-y-6 sm:gap-x-6 md:flex md:flex-wrap md:justify-end md:gap-x-12 md:gap-y-4 font-inter text-[13px]  lg:text-base font-bold text-offwhite mb-16'>
             <Link
               href='/'
               className='hover:text-primary transition-colors uppercase tracking-widest'

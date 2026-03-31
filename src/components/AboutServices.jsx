@@ -5,10 +5,10 @@ import SectionHeading from './SectionHeading';
 
 const baseServices = [
   'Web Design',
-  'Web Development',
-  'App Design',
-  'UI/UX Research',
-  'Branding',
+  'UI/UX Design',
+  'Brand Strategy',
+  'FullStack',
+  'E-commerce',
 ];
 
 // Repeat to create an "infinite" scroll effect
@@ -46,12 +46,12 @@ export default function AboutServices() {
                 className='flex flex-col'
               >
                 {services.map((item, i) => {
-                  const isActive = i === (activeIdx - 1);
+                  const isActive = i + 1 === (activeIdx);
                   return (
                     <div
                       key={i}
                       className='h-20 flex items-center cursor-pointer px-2'
-                      onClick={() => setActiveIdx(i)}
+                      onClick={() => setActiveIdx(i + 1)}
                     >
                       <h3
                         className={`font-oswald text-[2.5rem] md:text-6xl uppercase transition-all duration-500 w-full truncate`}
