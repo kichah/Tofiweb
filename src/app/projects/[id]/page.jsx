@@ -71,9 +71,9 @@ export default async function SingleProjectPage({ params }) {
               <div>
                 <p className="font-inter text-[11px] text-gray-500 uppercase tracking-widest font-bold mb-3">Core Technologies</p>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  {project.tags.map(tag => (
-                    <span key={tag.text} className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full font-inter text-[11px] font-bold text-gray-300">
-                      {tag.text}
+                  {project.tags.map((tag, i) => (
+                    <span key={i} className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full font-inter text-[11px] font-bold text-gray-300">
+                      {tag}
                     </span>
                   ))}
                 </div>

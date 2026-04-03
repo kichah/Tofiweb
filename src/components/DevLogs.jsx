@@ -9,7 +9,7 @@ export default function DevLogs() {
   return (
     <section
       id='dev-blog'
-      className=' py-20 md:py-24 bg-background border-b border-[#374151]'
+      className=' py-20 md:py-32 bg-background border-b border-[#374151]'
     >
       <div className='section-container'>
         <div className='flex justify-between items-end mb-12 md:mb-16 w-full'>

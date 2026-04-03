@@ -30,11 +30,20 @@ export default function AboutServices() {
   return (
     <section
       id='about'
-      className='py-16 md:py-20 lg:py-32 bg-background text-offwhite overflow-hidden border-b border-[#374151]'
+      className='py-20 md:py-32 bg-background text-offwhite overflow-hidden border-b border-[#374151]'
     >
-      <div className='section-container flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 xl:gap-24'>
-        {/* Left: What I DO - Vertical Carousel */}
-        <div className='flex-1 flex flex-col border-b md:border-b-0 md:border-r border-white/10 pb-10 md:pb-0 md:pr-10 order-2 md:order-1'>
+      <div className='section-container flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 xl:gap-24 '>
+        {/* Left: Who Am I */}
+        <div className='flex-1 flex flex-col border-b md:border-b-0 md:border-r border-white/10  md:pr-10 justify-center h-auto md:h-full md:pl-8 mt-4 md:mt-0 pb-16 md:pb-0 '>
+          <SectionHeading className='mb-8 font-oswald text-4xl md:text-5xl'>
+            Who Am I
+          </SectionHeading>
+          <p className='font-inter text-2xl md:text-3xl leading-[1.6] text-gray-400 font-light tracking-tight max-w-2xl'>
+            Hi, I'm Abdellatif—but my clients call me Tofi. I bridge the gap between <strong className='text-offwhite font-normal'>beautiful brand design</strong> and <strong className='text-offwhite font-normal'>lightning-fast code</strong>. As your dedicated digital partner, I build custom, frictionless web experiences that eliminate technical headaches, build buyer trust, and turn your local traffic into confirmed sales.
+          </p>
+        </div>
+        {/* Right: What I DO - Vertical Carousel */}
+        <div className='flex-1 flex flex-col  pb-10 md:pb-0 md:pr-10 '>
           <SectionHeading className=''>What I Do</SectionHeading>
 
           <div className='relative h-100 md:h-112.5 overflow-hidden'>
@@ -73,16 +82,6 @@ export default function AboutServices() {
             <div className='absolute top-0 left-0 right-0 h-32 bg-linear-to-b from-background via-background/80 to-transparent pointer-events-none z-10'></div>
             <div className='absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-background via-background/80 to-transparent pointer-events-none z-10'></div>
           </div>
-        </div>
-
-        {/* Right: Who Am I */}
-        <div className='flex-1 flex flex-col justify-center h-auto md:h-full md:pl-8 mt-4 md:mt-0 order-1 md:order-2 pb-16 md:pb-0 '>
-          <SectionHeading className='mb-8 font-oswald text-4xl md:text-5xl'>
-            Who Am I
-          </SectionHeading>
-          <p className='font-inter text-2xl md:text-3xl leading-[1.6] text-gray-400 font-light tracking-tight max-w-2xl'>
-            Hi, I'm Abdellatif—but my clients call me Tofi. I bridge the gap between <strong className='text-offwhite font-normal'>beautiful brand design</strong> and <strong className='text-offwhite font-normal'>lightning-fast code</strong>. As your dedicated digital partner, I build custom, frictionless web experiences that eliminate technical headaches, build buyer trust, and turn your local traffic into confirmed sales.
-          </p>
         </div>
       </div>
     </section>

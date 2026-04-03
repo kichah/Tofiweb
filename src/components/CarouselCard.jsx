@@ -3,7 +3,7 @@ import { Layers } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CarouselCard({ project, isActive, onClick, itemWidth, isClickable = true }) {
-
+  console.log(project);
   return (
     <div
       onClick={onClick}
@@ -36,12 +36,12 @@ export default function CarouselCard({ project, isActive, onClick, itemWidth, is
         </h3>
 
         <div className="flex flex-wrap gap-2 mb-6">
-          {project.tags.map(tag => (
-            <span
-              key={tag.text}
+          {project.tags.map((tag, i) => (
+            < span
+              key={i}
               className={`px-3 py-1.5 rounded-full text-[11px] font-inter font-bold tracking-wide border transition-opacity duration-700 bg-white/5 border-white/10 text-gray-300 ${!isActive ? 'opacity-40 grayscale' : ''}`}
             >
-              {tag.text}
+              {tag}
             </span>
           ))}
         </div>
@@ -71,6 +71,6 @@ export default function CarouselCard({ project, isActive, onClick, itemWidth, is
           </Link>
         </div>
       </div>
-    </div>
+    </div >
   );
 }

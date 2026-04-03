@@ -3,7 +3,7 @@ import { Phone, Mail, Instagram, Facebook, Twitter, Linkedin } from 'lucide-reac
 
 export default function Contact() {
   return (
-    <section id="contact" className="pt-16 pb-24 md:pt-24 md:pb-32 lg:pt-32 lg:pb-48 bg-[#0a0a0a] text-offwhite relative">
+    <section id="contact" className="py-20 md:py-32 bg-[#0a0a0a] text-offwhite relative">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Area */}

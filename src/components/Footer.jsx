@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className=' bg-background pt-20 pb-12 border-t border-white/5 relative z-10 -mt-10'>
+    <footer className=' bg-background pt-20 pb-12 border-t border-white/5 relative z-10 '>
       {/* The mt-[-40px] and z-10 is to slightly tuck under or right below the contact section curve if needed, though they don't overlap directly */}
       <div className='section-container flex flex-col md:flex-row justify-between gap-16 mt-10'>
         {/* Left Area (1fr) */}

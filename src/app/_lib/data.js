@@ -4,9 +4,9 @@ export const projects = [
     title: 'Portfolio Website V3',
     category: 'UI/UX Design',
     tags: [
-      { text: 'Landing Page', color: 'green' },
-      { text: 'Responsive', color: 'indigo' },
-      { text: 'Light Mode', color: 'orange' },
+      , 'Landing Page'
+      , 'Responsive'
+      , 'Light Mode'
     ],
     detail:
       'A personal portfolio site built with Next.js, featuring a fully responsive layout and dark/light mode toggle. Optimized for performance, accessibility, and clean navigation...',
@@ -20,9 +20,9 @@ export const projects = [
     title: 'Digital Agency Website',
     category: 'UI/UX Design',
     tags: [
-      { text: '8 Screen', color: 'green' },
-      { text: 'Mobile', color: 'indigo' },
-      { text: 'Dark Mode', color: 'orange' },
+      '8 Screen',
+      'Mobile',
+      'Dark Mode'
     ],
     detail:
       'Functional development. With experience across design systems, user experience, and front-end technologies, I focus on crafting products that are not just beautiful but highly scalable.',
@@ -36,9 +36,9 @@ export const projects = [
     title: 'VR Games Website',
     category: 'UI/UX Design',
     tags: [
-      { text: '10 Screens', color: 'green' },
-      { text: 'Mobile', color: 'blue' },
-      { text: 'Shopping UI', color: 'orange' },
+      , '10 Screens'
+      , 'Mobile'
+      , 'Shopping UI'
     ],
     detail:
       'A modern e-commerce mobile interface focused on minimal design, easy checkout flow, and clean product layouts. Designed entirely in Figma with a focus on immersive aesthetics.',
@@ -52,8 +52,53 @@ export const projects = [
     title: 'Fintech Dashboard',
     category: 'Web App',
     tags: [
-      { text: 'Dashboard', color: 'blue' },
-      { text: 'Analytics', color: 'purple' },
+      , 'Dashboard'
+      , 'Analytics'
+    ],
+    detail:
+      'A sleek financial dashboard presenting complex data in an easy-to-read, actionable format utilizing charts, custom widgets, and dark mode optimizations.',
+    img: '/img/hero.webp',
+    webImg: '/img/fullwebsite.png',
+    webLink: '#',
+    githubLink: '#',
+  },
+  {
+    id: 5,
+    title: 'Fintech Dashboard',
+    category: 'Web App',
+    tags: [
+      , 'Dashboard'
+      , 'Analytics'
+    ],
+    detail:
+      'A sleek financial dashboard presenting complex data in an easy-to-read, actionable format utilizing charts, custom widgets, and dark mode optimizations.',
+    img: '/img/hero.webp',
+    webImg: '/img/fullwebsite.png',
+    webLink: '#',
+    githubLink: '#',
+  },
+  {
+    id: 6,
+    title: 'Fintech Dashboard',
+    category: 'Web App',
+    tags: [
+      , 'Dashboard'
+      , 'Analytics'
+    ],
+    detail:
+      'A sleek financial dashboard presenting complex data in an easy-to-read, actionable format utilizing charts, custom widgets, and dark mode optimizations.',
+    img: '/img/hero.webp',
+    webImg: '/img/fullwebsite.png',
+    webLink: '#',
+    githubLink: '#',
+  },
+  {
+    id: 7,
+    title: 'Fintech Dashboard',
+    category: 'Web App',
+    tags: [
+      , 'Dashboard'
+      , 'Analytics'
     ],
     detail:
       'A sleek financial dashboard presenting complex data in an easy-to-read, actionable format utilizing charts, custom widgets, and dark mode optimizations.',
