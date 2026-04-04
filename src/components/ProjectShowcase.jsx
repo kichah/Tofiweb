@@ -3,14 +3,15 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import ProjectsCarousel from './ProjectsCarousel';
 import { getProjects } from '@/app/_lib/apiProject';
-import { projects } from '@/app/_lib/data';
 
 export default async function ProjectShowcase() {
-  //const { projects, error } = await getProjects();
+  const { projects, error } = await getProjects();
 
-  //if (error) console.error(error);
+  if (error) console.error(error);
   // Ensure we safely handle the absence of projects gracefully
-  //const dataToPass = projects || [];
+  let dataToPass = projects || [];
+  if (projects.length <= 3)
+    dataToPass = [...projects, ...projects]
 
   return (
     <section
@@ -26,7 +27,7 @@ export default async function ProjectShowcase() {
 
       <div className='section-container relative w-full overflow-visible min-h-[500px] md:min-h-[600px] flex items-center'>
         {/* Pass the server-fetched projects into the Client-side Swiper carousel */}
-        <ProjectsCarousel projects={projects} />
+        <ProjectsCarousel projects={dataToPass} />
       </div>
     </section>
   );

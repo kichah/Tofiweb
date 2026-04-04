@@ -109,14 +109,6 @@ export const projects = [
   },
 ];
 
-// Helper functions to retrieve data inside routes
-export function getAllProjects() {
-  return projects;
-}
-
-export function getProjectById(id) {
-  return projects.find(project => project.id === parseInt(id));
-}
 
 // Blog / Dev Log Data
 export const blogs = [
@@ -155,10 +147,21 @@ export const blogs = [
   },
 ];
 
-export function getAllBlogs() {
-  return blogs;
+export function formatLocalDate(dateString) {
+  const date = new Date(dateString);
+
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: '2-digit',
+    year: 'numeric'
+  }).format(date);
 }
 
-export function getBlogBySlug(slug) {
-  return blogs.find(blog => blog.slug === slug);
+export function createSlug(title) {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }

@@ -5,6 +5,8 @@ import TechStackMarquee from "@/components/TechStackMarquee";
 import DevLogs from "@/components/DevLogs";
 import Contact from "@/components/Contact";
 import MyApproach from "@/components/MyApproach";
+import { Suspense } from "react";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 export default async function Home() {
 
@@ -12,10 +14,14 @@ export default async function Home() {
     <main className="min-h-screen relative overflow-x-clip bg-background" >
       <Hero />
       <AboutServices />
-      <ProjectShowcase />
+      <Suspense fallback={<LoadingSpinner />}>
+        <ProjectShowcase />
+      </Suspense>
       <TechStackMarquee />
       <MyApproach />
-      <DevLogs />
+      <Suspense fallback={<LoadingSpinner />}>
+        <DevLogs />
+      </Suspense>
       <Contact />
     </main>
   );

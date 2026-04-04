@@ -1,8 +1,9 @@
-import { getAllBlogs } from "@/app/_lib/data";
 import Link from "next/link";
+import { getAllBlogs } from "../_lib/apiBlogs";
+import { formatLocalDate } from "../_lib/data";
 
-export default function BlogPage() {
-  const logs = getAllBlogs();
+export default async function BlogPage() {
+  const { Blogs: logs } = await getAllBlogs();
 
   return (
     <main className="min-h-screen pt-36 pb-24 bg-background text-white">
@@ -22,13 +23,13 @@ export default function BlogPage() {
               </div>
               <div className='flex gap-4 items-center mb-4'>
                 <span className='px-3 py-1 rounded-full bg-white/5 border border-white/10 text-primary font-inter font-bold text-[10px] tracking-widest uppercase'>
-                  {log.category}
+                  {log.tag}
                 </span>
                 <div className='flex items-center gap-2 text-gray-500 font-inter text-xs tracking-wider'>
                   <span className='text-tagRed text-[12px]'>●</span>
                   <span>{log.author}</span>
                   <span className='text-tagOrange text-[12px]'>●</span>
-                  <span>{log.date}</span>
+                  <span>{formatLocalDate(log.created_at)}</span>
                 </div>
               </div>
               <h3 className='font-oswald text-3xl md:text-[32px] md:leading-tight text-offwhite group-hover:text-primary transition-colors tracking-wide'>

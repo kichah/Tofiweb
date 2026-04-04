@@ -1,11 +1,11 @@
-import { getProjectById } from "@/app/_lib/data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { getProjectById } from "@/app/_lib/apiProject";
 
 export default async function SingleProjectPage({ params }) {
   const { id } = await params
-  const project = getProjectById(id);
+  const { project } = await getProjectById(id);
 
   if (!project) notFound();
 

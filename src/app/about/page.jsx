@@ -14,7 +14,7 @@ export default function AboutPage() {
 
       {/* SECTION 1: The Hero & Origin */}
       <section className="section-container relative mb-32 md:mb-40">
-        <h1 className="text-left font-oswald text-5xl md:text-7xl lg:text-[80px] xl:text-[100px] uppercase tracking-wider mb-16 md:mb-24 leading-[1.1] text-white border-l-[6px] md:border-l-[8px] border-primary pl-6 md:pl-10">
+        <h1 className="text-left font-oswald text-5xl md:text-7xl lg:text-[80px] xl:text-[100px] uppercase tracking-wider mb-16 md:mb-24 leading-[1.1] text-white border-l-[6px] md:border-l-8 border-primary pl-6 md:pl-10">
           BUILT ON DISCIPLINE.<br />
           <span className="text-tagOrange drop-shadow-[0_0_20px_rgba(246,92,10,0.5)]">ENGINEERED FOR GROWTH.</span>
         </h1>

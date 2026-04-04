@@ -1,8 +1,8 @@
-import { getAllProjects } from "@/app/_lib/data";
 import CarouselCard from "@/components/CarouselCard";
+import { getProjects } from "@/app/_lib/apiProject";
 
-export default function ProjectsPage() {
-  const projects = getAllProjects();
+export default async function ProjectsPage() {
+  const { projects } = await getProjects();
 
   return (
     <main className="min-h-screen pt-36 pb-24 bg-background text-white">

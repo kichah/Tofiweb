@@ -1,10 +1,12 @@
+import { getAllBlogs } from '@/app/_lib/apiBlogs';
 import SectionHeading from './SectionHeading';
 import { ArrowUpRight } from 'lucide-react';
+import { formatLocalDate } from '@/app/_lib/data';
 import Link from 'next/link';
-import { getAllBlogs } from '@/app/_lib/data';
 
-export default function DevLogs() {
-  const logs = getAllBlogs();
+export default async function DevLogs() {
+  const { Blogs: logs } = await getAllBlogs();
+  console.log(logs);
 
   return (
     <section
@@ -49,7 +51,7 @@ export default function DevLogs() {
 
               <div className='mb-4'>
                 <span className='px-4 py-1.5 rounded-full bg-white/5 text-offwhite font-inter text-xs tracking-wide'>
-                  {log.category}
+                  {log.tag}
                 </span>
               </div>
               <h3 className='font-inter text-xl md:text-2xl text-offwhite group-hover:text-primary transition-colors mb-4 font-medium leading-[1.3]'>
@@ -59,7 +61,7 @@ export default function DevLogs() {
                 <span className='text-tagRed text-[12px]'>●</span>
                 <span>{log.author}</span>
                 <span className='text-tagOrange text-[12px]'>●</span>
-                <span>{log.date}</span>
+                <span>{formatLocalDate(log.created_at)}</span>
               </div>
             </Link>
           ))}

@@ -10,7 +10,6 @@ import 'swiper/css/pagination';
 
 export default function ProjectsCarousel({ projects }) {
   const [swiperInstance, setSwiperInstance] = useState(null);
-
   if (!projects || projects.length === 0) return null;
 
   return (
@@ -39,6 +38,7 @@ export default function ProjectsCarousel({ projects }) {
           1200: {
             slidesOffsetBefore: -80,
             slidesPerView: 3,
+            loop: projects.length > 3 ? true : false,
 
           },
         }}
@@ -47,7 +47,7 @@ export default function ProjectsCarousel({ projects }) {
       >
         {projects.map((project, i) => (
           <SwiperSlide
-            key={project.id}
+            key={`${project.id} ${Math.random()}`}
             className="w-[82vw]! md:w-[450px]!"
           >
             {({ isActive }) => (

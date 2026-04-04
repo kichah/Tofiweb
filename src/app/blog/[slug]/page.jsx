@@ -1,12 +1,15 @@
-import { getBlogBySlug } from "@/app/_lib/data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { getBlogBySlug } from "@/app/_lib/apiBlogs";
+import { formatLocalDate } from "@/app/_lib/data";
 
 export default async function SingleBlogPostPage({ params }) {
   const { slug } = await params
-  const blog = getBlogBySlug(slug);
+  const { blog } = await getBlogBySlug(slug);
+  console.log(blog);
 
+  const date = formatLocalDate(blog.created_at)
   if (!blog) notFound();
 
   return (
@@ -24,12 +27,12 @@ export default async function SingleBlogPostPage({ params }) {
         <header className="mb-12">
           <div className="flex flex-wrap items-center gap-4 mb-6">
             <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-primary text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-              {blog.category}
+              {blog.tag}
             </span>
             <div className="flex items-center gap-2 text-gray-500 font-inter text-sm font-medium tracking-wide">
               <span>{blog.author}</span>
               <span className='text-tagOrange text-[10px]'>/</span>
-              <span>{blog.date}</span>
+              <span>{date}</span>
             </div>
           </div>
 
@@ -38,7 +41,7 @@ export default async function SingleBlogPostPage({ params }) {
           </h1>
 
           <p className="font-inter text-xl md:text-2xl text-gray-400 leading-relaxed font-light mt-6">
-            {blog.description}
+            {blog.short_desc}
           </p>
         </header>
 
@@ -53,15 +56,12 @@ export default async function SingleBlogPostPage({ params }) {
 
         {/* Article Prose Content Area */}
         <div className="prose prose-invert prose-lg md:prose-xl font-inter max-w-none text-gray-300 leading-loose prose-p:mb-8 hover:prose-a:text-primary prose-a:transition-colors">
-          <p>{blog.content}</p>
-          <p>Morbi tincidunt risus in felis vestibulum, ullamcorper posuere ex tincidunt. Donec commodo elementum urna sit amet bibendum. Fusce volutpat scelerisque lacus, sit amet accumsan est hendrerit interdum. Aenean ac sem purus.</p>
-          <p>Phasellus auctor augue ex, in aliquet lectus vehicula id. Nullam vitae rhoncus velit. Duis aliquet risus sapien, sit amet lacinia libero tempor ullamcorper. </p>
+          <p>{blog.description}</p>
 
           <blockquote className="border-l-4 border-primary bg-white/5 p-6 rounded-r-2xl my-10 italic text-white font-medium shadow-inner">
             "We aren't just writing code, we are authoring technical infrastructure that scales emotionally with the user base."
           </blockquote>
 
-          <p>Vestibulum tempor lectus augue, scelerisque volutpat purus porta dictum. Nam ullamcorper feugiat metus at consequat. Nunc porta neque accumsan, elementum dolor sit amet, ornare id cursus quis.</p>
         </div>
 
       </article>

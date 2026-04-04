@@ -3,7 +3,6 @@ import { Layers } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CarouselCard({ project, isActive, onClick, itemWidth, isClickable = true }) {
-  console.log(project);
   return (
     <div
       onClick={onClick}
